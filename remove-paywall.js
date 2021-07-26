@@ -21,8 +21,8 @@ function removePaywall() {
   var screenOverlayContainer = document.querySelector( '#syncronexOverlayContainer' );
   screenOverlayContainer.parentNode.removeChild( screenOverlayContainer );
 
-  var screenOverlayContainer = document.querySelector( '#sticky-anchor' );
-  screenOverlayContainer.parentNode.removeChild( screenOverlayContainer );
+  var stickyAd = document.querySelector( '#sticky-anchor' );
+  stickyAd.parentNode.removeChild( stickyAd );
 
   document.querySelectorAll( '.share-container, .tncms-block' ).forEach( function( blockToRemove ) {
     blockToRemove.remove();
