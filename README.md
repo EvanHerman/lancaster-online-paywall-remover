@@ -13,4 +13,4 @@ This Chrome extension will hide the https://lancasteronline.com/ paywall and adv
 
 ### Improvements or ideas?
 
-This was a fun little project I wanted to work on, one weekend. Feel free to issue a pull request with any improvements or ideas!
+This was a fun little project I wanted to work on, one random weekend. Feel free to issue a pull request with any improvements or ideas!
