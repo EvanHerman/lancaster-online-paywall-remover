@@ -13,18 +13,24 @@ removePaywallBtn.addEventListener( 'click', async () => {
 
 // The body of this function will be execueted as a content script inside the current page
 function removePaywall() {
-  document.body.style.overflowY = 'visible';
-
-  var screenOverlay = document.querySelector( '#syncronexOverlay' );
+  let screenOverlay = document.querySelector( '.tp-backdrop' );
   screenOverlay.parentNode.removeChild( screenOverlay );
 
-  var screenOverlayContainer = document.querySelector( '#syncronexOverlayContainer' );
+  let screenOverlayContainer = document.querySelector( '.tp-modal' );
   screenOverlayContainer.parentNode.removeChild( screenOverlayContainer );
 
-  var stickyAd = document.querySelector( '#sticky-anchor' );
+  let stickyAd = document.querySelector( '#sticky-anchor' );
   stickyAd.parentNode.removeChild( stickyAd );
 
-  document.querySelectorAll( '.share-container, .tncms-block' ).forEach( function( blockToRemove ) {
+  let mainAd = document.querySelector( '#x-reveal-ad' );
+  if ( null !== mainAd ) {
+    mainAd.parentNode.removeChild( mainAd );
+  }
+
+  const body =  document.querySelector( 'body' );
+  body.classList.remove( 'tp-modal-open' );
+
+  document.querySelectorAll( '.share-container, .sticky-anchor, .tncms-block, .tncms-region' ).forEach( function( blockToRemove ) {
     blockToRemove.remove();
   } );
 }
