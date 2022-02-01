@@ -27,7 +27,7 @@ function removePaywall() {
     mainAd.parentNode.removeChild( mainAd );
   }
 
-  const body =  document.querySelector( 'body' );
+  const body = document.querySelector( 'body' );
   body.classList.remove( 'tp-modal-open' );
 
   document.querySelectorAll( '.share-container, .sticky-anchor, .tncms-block, .tncms-region' ).forEach( function( blockToRemove ) {
