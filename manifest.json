@@ -4,12 +4,13 @@
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [ "storage", "activeTab", "scripting" ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "/images/lancaster_online.png"
+  "content_scripts": [
+    {
+      "matches": [ "https://lancasteronline.com/*" ],
+      "js": [ "remove-paywall.js" ],
+      "run_at": "document_idle"
     }
-  },
+  ],
   "icons": {
     "16": "/images/lancaster_online.png",
     "32": "/images/lancaster_online.png",
