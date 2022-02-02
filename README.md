@@ -2,6 +2,9 @@
 
 This Chrome extension will hide the https://lancasteronline.com/ paywall and advertisements.
 
+#### Note
+The extension will only run on https://lancasteronline.com pages.
+
 ### How To
 
 1) Clone this repository.
