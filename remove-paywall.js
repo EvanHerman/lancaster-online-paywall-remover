@@ -23,7 +23,7 @@ function removePaywall() {
     const body = document.querySelector( 'body' );
     body.classList.remove( 'tp-modal-open' );
 
-    console.log( "LancasterOnline paywall removed." );
+    console.log( 'LancasterOnline paywall removed.' );
   }, 200 );
 }
 
@@ -38,7 +38,7 @@ function removeAds() {
   // ie: share buttons, sidebar ads, in-content ads etc.
   hideAllElements( '.share-container, .tnt-ads-container' );
 
-  console.log( "LancasterOnline ads removed." );
+  console.log( 'LancasterOnline ads removed.' );
 }
 
 /**
