@@ -58,7 +58,7 @@ function hideElement( elementSelector ) {
 /**
  * Hide multiple elements on the page.
  *
- * @param  {string} elementSelectors The elements to remove, separted by a comma.
+ * @param  {string} elementSelectors The elements to remove, separated by a comma.
  *
  * @return {null}
  */
