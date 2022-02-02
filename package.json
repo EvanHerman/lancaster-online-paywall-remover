@@ -1,0 +1,23 @@
+{
+  "name": "lancaster-online-paywall-remover",
+  "version": "1.0.0",
+  "description": "This Chrome extension will hide the https://lancasteronline.com/ paywall and advertisements.",
+  "main": "remove-paywall.js",
+  "dependencies": {
+    "cypress": "^9.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanHerman/lancaster-online-paywall-remover.git"
+  },
+  "author": "EvanHerman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvanHerman/lancaster-online-paywall-remover/issues"
+  },
+  "homepage": "https://github.com/EvanHerman/lancaster-online-paywall-remover#readme"
+}

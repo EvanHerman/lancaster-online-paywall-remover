@@ -1,30 +1,7 @@
-// The body of this function will be execueted as a content script inside the current page
 function removePaywall() {
-  // Add a 200ms timeout to wait for the DOM content to appear
-  setTimeout(function() {
-    removeAds();
-
-    // Check if paywall exists befoore altering the DOM
-    let element = document.querySelector( '.tp-modal' );
-    if ( null === element ) {
-      return;
-    }
-
-    // Screen Overlay
-    hideElement( '.tp-backdrop' );
-
-    // Paywall Modal
-    hideElement( '.tp-modal' );
-
-    // Sticky Footer Ad
-    hideElement( '#sticky-anchor' );
-
-    // Remove the body class preventing scrolling
-    const body = document.querySelector( 'body' );
-    body.classList.remove( 'tp-modal-open' );
-
-    console.log( 'LancasterOnline paywall removed.' );
-  }, 200 );
+  // Set a cookie to never show the paywall
+  setCookie( 'xbc', '', 30 );
+  removeAds();
 }
 
 function removeAds() {
@@ -36,9 +13,14 @@ function removeAds() {
 
   // Hide unwanted elements on the page
   // ie: share buttons, sidebar ads, in-content ads etc.
-  hideAllElements( '.share-container, .tnt-ads-container' );
+  hideAllElements( '#tncms-region-article_top, .share-container, .tnt-ads-container, #footer-sub' );
+}
 
-  console.log( 'LancasterOnline ads removed.' );
+function setCookie( cName, cValue, expDays ) {
+  let date = new Date();
+  date.setTime( date.getTime() + ( expDays * 24 * 60 * 60 * 1000 ) );
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = cName + "=" + cValue + "; " + expires + "; domain=.lancasteronline.com; path=/";
 }
 
 /**

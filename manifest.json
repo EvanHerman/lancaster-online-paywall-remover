@@ -3,7 +3,7 @@
   "description": "Remove the paywall from Lancaster Online.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": [ "storage", "activeTab", "scripting" ],
+  "permissions": [ "cookies", "storage", "activeTab", "scripting" ],
   "content_scripts": [
     {
       "matches": [ "https://lancasteronline.com/*" ],
