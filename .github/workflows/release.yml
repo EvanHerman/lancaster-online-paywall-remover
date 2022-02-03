@@ -1,15 +1,13 @@
-name: "pre-release"
+name: "release"
 
 on:
-  workflow_run:
-    workflows: e2e
-    branches: main
-    tags-ignore: *
-    types: completed
+  push:
+    tags:
+      - "v*"
 
 jobs:
-  pre-release:
-    name: "Pre Release"
+  release:
+    name: "Release"
     runs-on: "ubuntu-latest"
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
@@ -17,7 +15,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
-      - name: "Pre-release"
+      - name: "Release"
         run: |
           FILES="images LICENSE manifest.json remove-paywall.js"
           zip -r lancaster-online-paywall-remover.zip $FILES
@@ -25,7 +23,5 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
+          prerelease: false
           files: ./lancaster-online-paywall-remover.zip
