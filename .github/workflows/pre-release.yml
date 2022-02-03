@@ -1,10 +1,12 @@
 name: "pre-release"
 
-on:
-  workflow_run:
-    workflows: e2e
-    branches: main
-    types: completed
+on: [push, pull_request]
+
+# on:
+#   workflow_run:
+#     workflows: e2e
+#     branches: main
+#     types: completed
 
 jobs:
   pre-release:
@@ -13,11 +15,12 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      # ...
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
       - name: "Pre-release"
         run: |
           ls -la
-          pwd
           echo "Deploying a development build pre-release!"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
