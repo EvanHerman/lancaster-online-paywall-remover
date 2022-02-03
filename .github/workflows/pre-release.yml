@@ -21,7 +21,7 @@ jobs:
       - name: "Pre-release"
         run: |
           FILES="images LICENSE manifest.json package.json remove-paywall.js"
-          zip lancaster-online-paywall-remover.zip $FILES
+          zip -r lancaster-online-paywall-remover.zip $FILES
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
