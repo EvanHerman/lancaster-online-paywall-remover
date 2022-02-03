@@ -1,8 +1,9 @@
 name: e2e
 
-push:
-  branches:
-    - master
+on:
+  push:
+    branches:
+      - master
   pull_request: {}
 
 jobs:
