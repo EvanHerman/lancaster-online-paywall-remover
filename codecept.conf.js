@@ -12,7 +12,6 @@ exports.config = {
         args: [
           "--no-sandbox",
           "--disable-setuid-sandbox",
-          "--disable-dev-shm-usage",
           `--disable-extensions-except=${extensionPath}`,
           `--load-extension=${extensionPath}`,
           "--disable-gpu",
