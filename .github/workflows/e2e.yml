@@ -12,4 +12,5 @@ jobs:
 
       - name: Run e2e tests 🕒
         uses: GabrielBB/xvfb-action@v1
-        run: npm run test
+        with:
+          run: npm run test
