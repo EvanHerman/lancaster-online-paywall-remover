@@ -20,8 +20,8 @@ jobs:
 
       - name: "Pre-release"
         run: |
-          ls -la
-          echo "Deploying a development build pre-release!"
+          FILES="images LICENSE manifest.json package.json remove-paywall.js"
+          zip lancaster-online-paywall-remover.zip $FILES
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -29,9 +29,4 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
-          files: |
-            ./images/
-            ./LICENSE
-            ./manifest.json
-            ./package.json
-            ./remove-paywall.js
+          files: ./lancaster-online-paywall-remover.zip
