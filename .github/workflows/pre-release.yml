@@ -4,7 +4,6 @@ on:
   workflow_run:
     workflows: e2e
     branches: main
-    tags-ignore: *
     types: completed
 
 jobs:
