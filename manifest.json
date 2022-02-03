@@ -1,7 +1,7 @@
 {
   "name": "Lancaster Online - Remove Paywall",
   "description": "Remove the paywall from Lancaster Online.",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "manifest_version": 3,
   "permissions": [
     "cookies",
