@@ -1,1 +1,29 @@
-{ "name": "Lancaster Online - Remove Paywall", "description": "Remove the paywall from Lancaster Online.", "version": "1.0.0", "manifest_version": 3, "permissions": [ "cookies", "storage", "activeTab", "scripting" ], "content_scripts": [ { "matches": [ "https://lancasteronline.com/*" ], "js": [ "remove-paywall.js" ], "run_at": "document_idle" } ], "icons": { "16": "/images/lancaster_online.png", "32": "/images/lancaster_online.png", "48": "/images/lancaster_online.png", "128": "/images/lancaster_online.png" } }
+{
+  "name": "Lancaster Online - Remove Paywall",
+  "description": "Remove the paywall from Lancaster Online.",
+  "version": "0.0.9",
+  "manifest_version": 3,
+  "permissions": [
+    "cookies",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://lancasteronline.com/*"
+      ],
+      "js": [
+        "remove-paywall.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "/images/lancaster_online.png",
+    "32": "/images/lancaster_online.png",
+    "48": "/images/lancaster_online.png",
+    "128": "/images/lancaster_online.png"
+  }
+}
