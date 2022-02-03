@@ -1,4 +1,4 @@
-# Lancaster Online - Remove Paywall
+# Lancaster Online - Remove Paywall ![main](https://github.com/EvanHerman/lancaster-online-paywall-remover/actions/workflows/e2e.yml/badge.svg)
 
 This Chrome extension will hide the https://lancasteronline.com/ paywall and advertisements.
 

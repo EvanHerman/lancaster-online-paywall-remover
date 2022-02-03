@@ -13,5 +13,5 @@ jobs:
       - name: Install node packages 🔧
         run: npm ci
 
-      - name: Run eslint 🕒
+      - name: Run e2e tests 🕒
         run: npm run test
