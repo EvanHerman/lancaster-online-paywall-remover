@@ -24,8 +24,8 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            images/
-            LICENSE
-            manifest.json
-            package.json
-            remove-paywall.js
+            ./images/
+            ./LICENSE
+            ./manifest.json
+            ./package.json
+            ./remove-paywall.js
