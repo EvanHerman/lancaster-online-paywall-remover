@@ -9,7 +9,14 @@ exports.config = {
       show: true,
       windowSize: '1400x1200',
       chrome: {
-        args: [ `--disable-extensions-except=${extensionPath}`, `--load-extension=${extensionPath}`, "--disable-gpu", "--window-size=1400,1200" ]
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          `--disable-extensions-except=${extensionPath}`,
+          `--load-extension=${extensionPath}`,
+          "--disable-gpu",
+          "--window-size=1400,1200"
+        ]
       }
     }
   },
