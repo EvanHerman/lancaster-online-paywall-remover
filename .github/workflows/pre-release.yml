@@ -3,7 +3,7 @@ name: "pre-release"
 on:
   workflow_run:
     workflows: e2e
-    branches: master
+    branches: main
     types: completed
 
 jobs:
