@@ -1,13 +1,22 @@
 {
   "name": "Lancaster Online - Remove Paywall",
   "description": "Remove the paywall from Lancaster Online.",
-  "version": "1.0.0",
+  "version": "0.0.9",
   "manifest_version": 3,
-  "permissions": [ "cookies", "storage", "activeTab", "scripting" ],
+  "permissions": [
+    "cookies",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
   "content_scripts": [
     {
-      "matches": [ "https://lancasteronline.com/*" ],
-      "js": [ "remove-paywall.js" ],
+      "matches": [
+        "https://lancasteronline.com/*"
+      ],
+      "js": [
+        "remove-paywall.js"
+      ],
       "run_at": "document_idle"
     }
   ],
