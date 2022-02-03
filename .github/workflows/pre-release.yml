@@ -2,9 +2,9 @@ name: "pre-release"
 
 on:
   workflow_run:
-    workflows: ["e2e"]
-    types:
-      - completed
+    workflows: e2e
+    branches: master
+    types: completed
 
 jobs:
   pre-release:
