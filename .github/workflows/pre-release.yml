@@ -15,7 +15,10 @@ jobs:
     steps:
       # ...
       - name: "Pre-release"
-        run: echo "Deploying a development build pre-release!"
+        run: |
+          ls -la
+          pwd
+          echo "Deploying a development build pre-release!"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
