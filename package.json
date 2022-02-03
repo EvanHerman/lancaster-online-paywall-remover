@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "This Chrome extension will hide the https://lancasteronline.com/ paywall and advertisements.",
   "main": "remove-paywall.js",
-  "dependencies": {
-    "cypress": "^9.4.1"
+  "dependencies": {},
+  "devDependencies": {
+    "codeceptjs": "^3.2.3",
+    "puppeteer": "^13.1.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx codeceptjs run"
   },
   "repository": {
     "type": "git",

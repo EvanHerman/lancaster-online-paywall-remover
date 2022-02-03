@@ -1,9 +1,19 @@
+/**
+ * Remove the paywall.
+ *
+ * @return {null}
+ */
 function removePaywall() {
   // Set a cookie to never show the paywall
   setCookie( 'xbc', '', 30 );
   removeAds();
 }
 
+/**
+ * Remove the ads on the page.
+ *
+ * @return {null}
+ */
 function removeAds() {
   // Main Ad
   hideElement( '#x-reveal-ad' );
