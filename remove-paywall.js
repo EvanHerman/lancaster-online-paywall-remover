@@ -15,11 +15,17 @@ function removePaywall() {
  * @return {null}
  */
 function removeAds() {
-  // Main Ad
-  hideElement( '#x-reveal-ad' );
+  // Subscriber modal.
+  hideElement( '.tp-modal' );
+  hideElement( '.tp-backdrop' );
 
-  // revcontent
-  hideElement( '.lnp-revcontent-wrapper' );
+  document.body.classList.remove( 'tp-modal-open' );
+
+  // Ads below content.
+  hideElement( '#tncms-region-article_instory_bottom' );
+
+  // Donation.
+  hideElement( '#tncms-region-article_container_bottom' );
 
   // Hide unwanted elements on the page
   // ie: share buttons, sidebar ads, in-content ads etc.
