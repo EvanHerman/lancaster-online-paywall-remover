@@ -1,6 +1,6 @@
 {
   "name": "lancaster-online-paywall-remover",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "This Chrome extension will hide the https://lancasteronline.com/ paywall and advertisements.",
   "main": "remove-paywall.js",
   "devDependencies": {
@@ -9,8 +9,7 @@
   },
   "scripts": {
     "test": "npx codeceptjs run",
-    "version": "manifestContent=$(variable=$(cat package.json | jq -r '.version'); jq --arg variable $variable '.version = $variable' manifest.json) && echo $manifestContent | jq > manifest.json && git add -A .",
-    "postversion": "git push && git push --tags"
+    "postversion": "manifestContent=$(variable=$(cat package.json | jq -r '.version'); jq --arg variable $variable '.version = $variable' manifest.json) && echo $manifestContent | jq > manifest.json && git add -A . && git push && git push --tags"
   },
   "repository": {
     "type": "git",
