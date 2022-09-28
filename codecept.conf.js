@@ -9,6 +9,7 @@ exports.config = {
       show: true,
       windowSize: '1400x1200',
       chrome: {
+        executablePath: '/usr/bin/google-chrome',
         args: [
           "--no-sandbox",
           "--disable-setuid-sandbox",
